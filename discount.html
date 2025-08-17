@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival Food Offer</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+      }
+
+      header {
+        background-color: #ff6f61; /* Coral red */
+        color: white;
+        text-align: center;
+        padding: 2em 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      .offer-banner {
+        background-color: #ffe0b2; /* Light orange */
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .offer-banner h2 {
+        margin-bottom: 10px;
+        color: #d32f2f; /* Dark red */
+      }
+
+      .offer-banner p {
+        font-size: 1.2em;
+      }
+
+      .food-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .food-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .food-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .food-item h3 {
+        margin-top: 0;
+      }
+
+      .food-item p {
+        margin-bottom: 10px;
+      }
+
+      .food-item .price {
+        font-weight: bold;
+        color: #4caf50; /* Green */
+      }
+
+      .food-item .discounted-price {
+        font-weight: bold;
+        color: #ff9800; /* Orange */
+        text-decoration: line-through;
+        margin-right: 5px;
+      }
+
+      .food-item button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      header {
+        /* background-color: black;   */
+        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 5px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 25px 0 black;
+      }
+      header * {
+        display: inline;
+      }
+      header li {
+        margin: 0 40px;
+      }
+      header li a {
+        color: white;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px aliceblue;
+        font-size: 27px;
+      }
+      header li img {
+        border-radius: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <header>
+        <h1>Festival Food Offers!</h1>
+    </header> -->
+
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <img
+              height="40px"
+              src="https://www.clipartmax.com/png/middle/112-1129793_healthy-food-logo-png.png"
+              alt="Healthy Food Logo"
+            />
+          </li>
+          <li>
+            <a href="Night night.html">Home</a>
+          </li>
+          <li>
+            <a href="about us.html">About us</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="./employment.html">Employment</a>
+           
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="offer-banner">
+        <h2>🎉 Festive Special: 30% OFF on All Food! 🎉</h2>
+        <p>
+          Celebrate with delicious food and amazing discounts. Order now and
+          enjoy!
+        </p>
+      </div>
+
+      <div class="food-items">
+        <div class="food-item">
+          <img src="Margherita Pizza.jpg" alt="Pizza" />
+          <h3>Margherita Pizza</h3>
+          <p>Classic tomato and mozzarella.</p>
+          <p>
+            <span class="discounted-price">₹200</span>
+            <span class="price">₹140</span>
+          </p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img src="Veggie Burger.jpg" alt="Burger" />
+          <h3>Veggie Burger</h3>
+          <p>Crispy vegetable patty.</p>
+          <p>
+            <span class="discounted-price">₹100</span>
+            <span class="price">₹70</span>
+          </p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img src="Gujarati Thali.jpg" alt="Thali" />
+          <h3>Gujarati Thali</h3>
+          <p>Assortment of Gujarati dishes.</p>
+          <p>
+            <span class="discounted-price">₹300</span>
+            <span class="price">₹210</span>
+          </p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img src="lassi.jpg" alt="Lassi" />
+          <h3>Sweet Lassi</h3>
+          <p>Delicious yogurt drink.</p>
+          <p>
+            <span class="discounted-price">₹50</span>
+            <span class="price">₹35</span>
+          </p>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img src="Veggie Supreme Pizza.jpg" alt="Veggie Pizza" />
+          <h3>Veggie Supreme Pizza</h3>
+          <p>Loaded with vegetables.</p>
+          <p>
+            <span class="discounted-price">₹250</span>
+            <span class="price">₹175</span>
+          </p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

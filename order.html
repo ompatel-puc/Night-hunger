@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order - Veg Delights</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* header {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        } */
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding-top: 100px;
+
+        }
+
+        .category {
+            margin-bottom: 20px;
+        }
+
+        .category h2 {
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-details h3 {
+            margin-top: 0;
+        }
+
+        .item-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .item-controls button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .item-controls input {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .cart {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+        }
+
+        .cart h2 {
+            margin-top: 0;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart-items li {
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-total {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        header {  
+            /* background-color: black;   */
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+            color: gray;
+            position: fixed;  
+            left: 0;  
+            right: 0;  
+            top: 0px;  
+            height: 50px;  
+            display: flex;  
+            align-items: center;  
+            /* box-shadow: 0 0 25px 0 black;   */
+        }  
+        header * {  
+            display: inline;  
+        }  
+        header li {  
+            margin: 0 40px;  
+        }  
+        header li a {  
+            color: white;  
+            text-decoration: none; 
+            text-shadow: 1px 1px 1px aliceblue;
+            font-size: 27px; 
+        }  
+        header li img {  
+            border-radius: 18px;
+        } 
+
+        button{
+            background-color: #e1c80b;
+            font-weight: bold;
+            color: black;
+            border: 2px solid gray;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <header>
+        <h1>Veg Delights - Online Food Order</h1>
+    </header> -->
+
+
+    <header>  
+        <nav>  
+            <ul>
+                <li>
+                    <img height="35px" src="https://www.clipartmax.com/png/middle/112-1129793_healthy-food-logo-png.png" alt="Healthy Food Logo" />
+                </li>  
+                <li>  
+                    <a href="Night night.html">Home</a>  
+                </li>  
+                <li>  
+                    <a href="about us.html">About us</a>
+                <li>  
+                    <a href="contact.html">Contact</a>  
+                </li>  
+                <li> 
+                    <a href="./employment.html">Employment</a>  <!-- Link to the new employment page -->
+                </li>  
+                <!-- <li>  
+                    <a href="donate us.jpg">Donate Us</a>  
+                </li>   -->
+            </ul>  
+        </nav>  
+    </header>  
+
+    <div class="container">
+
+        <div class="category">
+            <h2>Pizzas</h2>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Margherita Pizza</h3>
+                    <p>Classic tomato and mozzarella.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('margherita')">-</button>
+                    <input type="number" id="margherita" value="0" min="0">
+                    <button onclick="increaseQuantity('margherita')">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Veggie Supreme Pizza</h3>
+                    <p>Loaded with vegetables.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('veggie')">-</button>
+                    <input type="number" id="veggie" value="0" min="0">
+                    <button onclick="increaseQuantity('veggie')">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Burgers</h2>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Veggie Burger</h3>
+                    <p>Crispy vegetable patty.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('veggieburger')">-</button>
+                    <input type="number" id="veggieburger" value="0" min="0">
+                    <button onclick="increaseQuantity('veggieburger')">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Paneer Burger</h3>
+                    <p>Paneer patty burger.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('paneerburger')">-</button>
+                    <input type="number" id="paneerburger" value="0" min="0">
+                    <button onclick="increaseQuantity('paneerburger')">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Gujarati Thali</h2>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Gujarati Thali</h3>
+                    <p>Assortment of Gujarati dishes.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('gujthali')">-</button>
+                    <input type="number" id="gujthali" value="0" min="0">
+                    <button onclick="increaseQuantity('gujthali')">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Beverages</h2>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Masala Chai</h3>
+                    <p>Spiced Indian tea.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('chai')">-</button>
+                    <input type="number" id="chai" value="0" min="0">
+                    <button onclick="increaseQuantity('chai')">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-details">
+                    <h3>Lassi</h3>
+                    <p>Sweet yogurt drink.</p>
+                </div>
+                <div class="item-controls">
+                    <button onclick="decreaseQuantity('lassi')">-</button>
+                    <input type="number" id="lassi" value="0" min="0">
+                    <button onclick="increaseQuantity('lassi')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-items" id="cart-items">
+            </ul>
+        <div class="cart-total">Total: ₹<span id="cart-total">0</span></div>
+       <a href="confirm.html">  <button >Place Order</button></a>
+ 
+    </div>
+
+    <script>
+        let cart = {};
+        let totalPrice = 0;
+
+        function updateCart() {
+            const cartItemsList = document.getElementById('cart-items');
+            const cartTotalDisplay = document.getElementById('cart-total');
+            cartItemsList.innerHTML = '';
+            totalPrice = 0;
+
+            for (const item in cart) {
+                if (cart[item] > 0) {
+                    let price = 0;
+                    switch (item) {
+                        case 'margherita': price = 200; break;
+                        case 'veggie': price = 250; break;
+                        case 'veggieburger': price = 100; break;
+                        case 'paneerburger': price = 120; break;
+                        case 'gujthali': price = 300; break;
+                        case 'chai': price = 30; break;
+                        case 'lassi': price = 50; break;
+                    }
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${item}: ${cart[item]} x ₹${price}`;
+                    cartItemsList.appendChild(listItem);
+                    totalPrice += cart[item] * price;
+                }
+            }
+
+            cartTotalDisplay.textContent = totalPrice;
+        }
+
+        function increaseQuantity(itemId) {
+            const input = document.getElementById(itemId);
+            input.value = parseInt(input.value) + 1;
+            cart[itemId] = parseInt(input.value);
+            updateCart();
+        }
+
+        function decreaseQuantity(itemId) {
+            const input = document.getElementById(itemId);
+            if (parseInt(input.value) > 0) {
+                input.value = parseInt(input.value) - 1;
+                cart[itemId] = parseInt(input.value);
+                updateCart();
+            }
+        }
+
+        //initial cart update
+        updateCart();
+    </script>
+
+</body>
+</html>

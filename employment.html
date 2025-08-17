@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employment Application</title>
+  <style>
+    body {
+      
+      background: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding-top: 60px;
+    }
+
+    header {  
+            background-color: rgba(0, 0, 0, 0.3); 
+            text-shadow: 5px 5px 2px aliceblue;
+            position: fixed;  
+            left: 0;  
+            right: 0;  
+            top: 4px;  
+            height: 40px;  
+            display: flex;  
+            align-items: center;  
+
+        }  
+        header * {  
+            display: inline;  
+        }  
+        header li {  
+            margin: 0 40px;  
+        }  
+        header li a {  
+            color: white;  
+            text-decoration: none; 
+            text-shadow: 1px 1px 1px aliceblue;
+            font-size: 27px; 
+        }  
+        header li img {  
+            border-radius: 18px;
+        } 
+
+    form {
+      background-color: #ffffff;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    form h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #34495e;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 6px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #1abc9c;
+      outline: none;
+    }
+
+    select {
+      background-color: #fff;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <img height="40px" src="https://www.clipartmax.com/png/middle/112-1129793_healthy-food-logo-png.png" alt="Healthy Food Logo" />
+        </li>
+        <li><a href="Night night.html">Home</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="./employment.html">Employment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <form action="#" method="post" onsubmit="showAlert(event)">
+    <h2>Employment Application</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="number">Phone Number:</label>
+    <input type="tel" id="number" name="number" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="store">Select a Store:</label>
+    <select id="store" name="store" required>
+      <option value="" disabled selected>Select a store</option>
+      <option value="store1">Green Delight - Main Street</option>
+      <option value="store2">Healthy Bites - City Center</option>
+      <option value="store3">Organic World - Riverside</option>
+    </select>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <script>
+  function showAlert(event) {
+    event.preventDefault(); 
+    alert("Your application has been received.");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Confirmed</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: popUp 0.8s ease;
+    }
+
+    .container img {
+      width: 120px;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    h1 {
+      color: #28a745;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {  
+            /* background-color: black;   */
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+            position: fixed;  
+            left: 0;  
+            right: 0;  
+            top: 5px;  
+            height: 40px;  
+            display: flex;  
+            align-items: center;  
+            box-shadow: 0 0 25px 0 black;  
+        }  
+        header * {  
+            display: inline;  
+        }  
+        header li {  
+            margin: 0 40px;  
+        }  
+        header li a {  
+            color: white;  
+            text-decoration: none; 
+            text-shadow: 1px 1px 1px aliceblue;
+            font-size: 27px; 
+        }  
+        header li img {  
+            border-radius: 18px;
+        } 
+  </style>
+</head>
+<body>
+
+  <header>  
+        <nav>  
+            <ul>
+                <li>
+                    <img height="40px" src="https://www.clipartmax.com/png/middle/112-1129793_healthy-food-logo-png.png" alt="Healthy Food Logo" />
+                </li>  
+                <li>  
+                    <a href="Night night.html">Home</a>  
+                </li>  
+                <li>  
+                    <a href="about us.html">About us</a>
+                <li>  
+                    <a href="contact.html">Contact</a>  
+                </li>  
+                <li> 
+                    <a href="./employment.html">Employment</a>  <!-- Link to the new employment page -->
+                </li>  
+                 
+            </ul>  
+        </nav>  
+    </header>  
+
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Checkmark">
+    <h1>Order Confirmed!</h1>
+    <p>Your order has been placed successfully. Thank you.</p>
+  </div>
+
+</body>
+</html>
